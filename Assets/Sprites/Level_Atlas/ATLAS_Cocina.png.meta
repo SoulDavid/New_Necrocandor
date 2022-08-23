@@ -1,0 +1,970 @@
+fileFormatVersion: 2
+guid: 99723e478556304499a81d3ea03cf64e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ATLAS_Cocina_0
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2836
+        width: 589
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7b7db62b2b75f4cb1a4112128c7077
+      internalID: 236557753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_1
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 2884
+        width: 284
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e6c5e52b410c643814b0b159fc840c
+      internalID: -932341545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_2
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 2910
+        width: 378
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb59cb5fdb308e4db459b20b21535c2
+      internalID: -2079200702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_3
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 2949
+        width: 634
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25b039de02dac54aa1acc7faf6f47dc
+      internalID: -853106755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_4
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 2949
+        width: 634
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f44b209350fefc41b83b8ecb6cdba6d
+      internalID: -1822933282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_5
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 2841
+        width: 651
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3a04176cdec4d499a79e8d280b3f70
+      internalID: -80076526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2597
+        width: 935
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856fe72e85ca6d04fbf8ddcf3df476de
+      internalID: -217214016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_7
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 2532
+        width: 307
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46075ba3fc6209429ce5ca87f62a6a5
+      internalID: -2068997299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_8
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 2532
+        width: 302
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef46cfc8dce524444abcf5676de4cef8
+      internalID: -1455995431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_9
+      rect:
+        serializedVersion: 2
+        x: 2084
+        y: 2009
+        width: 1401
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bc695614a8bdf4e922b87bc660d74f
+      internalID: -600031452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_10
+      rect:
+        serializedVersion: 2
+        x: 3793
+        y: 1953
+        width: 179
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63be4f13d702e34f9eff8976c567c02
+      internalID: -1403200580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_11
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 2194
+        width: 861
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ee1d219f1ac124c940e10af956c0bc
+      internalID: 754240224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_12
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 2517
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b83e79da93c974c95edd23b6806174
+      internalID: 231683758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_13
+      rect:
+        serializedVersion: 2
+        x: 3590
+        y: 1953
+        width: 131
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7524ec677b7c704098280eab05a9977
+      internalID: 1296759685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_14
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2246
+        width: 449
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600d03718d82f7f4b83fa04123dc1d33
+      internalID: -88640605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_15
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 2246
+        width: 302
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894373c2f09112f4cbeabe247622d6c0
+      internalID: -1290518036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_16
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1110
+        width: 1824
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9332e593a06f7429189760a31d158f
+      internalID: -1714588378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_17
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 1649
+        width: 135
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3750c55b4f5ab84ea9da78ecaca3b59
+      internalID: 442353454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_18
+      rect:
+        serializedVersion: 2
+        x: 2339
+        y: 1671
+        width: 94
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35adcf7c627ead14c85b68877590af36
+      internalID: 207886538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_19
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 1671
+        width: 168
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff49aea23c56c942bbe52c6102ab6b9
+      internalID: 1808742353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_20
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 1671
+        width: 537
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca575a8bf2f2a2a498463a83348be97e
+      internalID: 1250234917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_21
+      rect:
+        serializedVersion: 2
+        x: 3413
+        y: 1216
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c07b7355975b32409a07ecefaca378b
+      internalID: 1339093210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_22
+      rect:
+        serializedVersion: 2
+        x: 2113
+        y: 874
+        width: 604
+        height: 662
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67defb8a24bb0041b37600c73a3cb65
+      internalID: -1109907982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_23
+      rect:
+        serializedVersion: 2
+        x: 2783
+        y: 1341
+        width: 304
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32d88184dfcdd04f930572642a3811e
+      internalID: 600486773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_24
+      rect:
+        serializedVersion: 2
+        x: 3156
+        y: 1347
+        width: 167
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045e141492b20984180b4d86a4547054
+      internalID: -1213565426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_25
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 57
+        width: 2004
+        height: 1006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188b3c5e5e056fb4c924e3fe1c67ea93
+      internalID: 166864261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_26
+      rect:
+        serializedVersion: 2
+        x: 2820
+        y: 842
+        width: 300
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305a618236fbe42488d7800171d93c51
+      internalID: 380686683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_27
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 894
+        width: 138
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7c686fcb6cc2d4ba000f731848cc71
+      internalID: 212260627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_28
+      rect:
+        serializedVersion: 2
+        x: 3413
+        y: 499
+        width: 612
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa14891f27c9024596095049d504f63
+      internalID: 534267686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_29
+      rect:
+        serializedVersion: 2
+        x: 2113
+        y: 363
+        width: 643
+        height: 411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f8762b94551554e910bc1c94c1b691
+      internalID: -737559714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_30
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 558
+        width: 368
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f7c0bad4a8487438e6220319d8c892
+      internalID: -1495783391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_31
+      rect:
+        serializedVersion: 2
+        x: 3263
+        y: 736
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e077cf01de60644a5fd58f24c0d257
+      internalID: 394286377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_32
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 355
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a55681f8d206ab4c85a2b92d4e34fd5
+      internalID: 492661063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_33
+      rect:
+        serializedVersion: 2
+        x: 2793
+        y: 110
+        width: 218
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71f8eb411e8d8445b65d7e0b9ad6a42
+      internalID: 472824290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_34
+      rect:
+        serializedVersion: 2
+        x: 3055
+        y: 110
+        width: 219
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ec3f26eb4e7dc448212f68dc689e20
+      internalID: -1177816519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_35
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 110
+        width: 218
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee2a58b24b627244a0fc81c494a4109
+      internalID: 1977312983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_36
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 108
+        width: 606
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e355db520d7c10145a16af8ad6deacf2
+      internalID: -510998286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS_Cocina_37
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 147
+        width: 389
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f2f6d66d3612a4f92367a089e530d7
+      internalID: 474800961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ATLAS_Cocina_29: -737559714
+      ATLAS_Cocina_7: -2068997299
+      ATLAS_Cocina_23: 600486773
+      ATLAS_Cocina_11: 754240224
+      ATLAS_Cocina_36: -510998286
+      ATLAS_Cocina_5: -80076526
+      ATLAS_Cocina_14: -88640605
+      ATLAS_Cocina_19: 1808742353
+      ATLAS_Cocina_22: -1109907982
+      ATLAS_Cocina_18: 207886538
+      ATLAS_Cocina_31: 394286377
+      ATLAS_Cocina_24: -1213565426
+      ATLAS_Cocina_17: 442353454
+      ATLAS_Cocina_35: 1977312983
+      ATLAS_Cocina_37: 474800961
+      ATLAS_Cocina_12: 231683758
+      ATLAS_Cocina_33: 472824290
+      ATLAS_Cocina_8: -1455995431
+      ATLAS_Cocina_6: -217214016
+      ATLAS_Cocina_0: 236557753
+      ATLAS_Cocina_2: -2079200702
+      ATLAS_Cocina_20: 1250234917
+      ATLAS_Cocina_10: -1403200580
+      ATLAS_Cocina_28: 534267686
+      ATLAS_Cocina_9: -600031452
+      ATLAS_Cocina_4: -1822933282
+      ATLAS_Cocina_15: -1290518036
+      ATLAS_Cocina_30: -1495783391
+      ATLAS_Cocina_32: 492661063
+      ATLAS_Cocina_25: 166864261
+      ATLAS_Cocina_34: -1177816519
+      ATLAS_Cocina_27: 212260627
+      ATLAS_Cocina_1: -932341545
+      ATLAS_Cocina_26: 380686683
+      ATLAS_Cocina_3: -853106755
+      ATLAS_Cocina_21: 1339093210
+      ATLAS_Cocina_16: -1714588378
+      ATLAS_Cocina_13: 1296759685
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
