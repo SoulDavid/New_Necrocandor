@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 velocity;
     private Rigidbody2D body;
     private Ground ground;
-    //private PlayerStates playerState;
     private State stateController;
 
     private float maxSpeedChange;
@@ -36,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     { 
         inputMovement = context.ReadValue<float>();
 
-        if(stateController.GetState() != "Hooking" && stateController.GetState() != "Impulsing")
+        if(stateController.GetState() != "Hooking" && stateController.GetState() != "Impulsing" && stateController.GetState() != "isDead")
         {
             if (inputMovement > 0)
                 SetDirection("RIGHT");
@@ -82,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         OnGround = ground.GetOnGround();
         velocity = body.velocity;
 
-        if(stateController.GetState() != "Hooking" && stateController.GetState() != "Impulsing") 
+        if(stateController.GetState() != "Hooking" && stateController.GetState() != "Impulsing" && stateController.GetState() != "isDead") 
         {
             acceleration = OnGround ? maxAcceleration : maxAirAcceleration;
             maxSpeedChange = acceleration * Time.deltaTime;

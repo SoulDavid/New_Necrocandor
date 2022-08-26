@@ -20,25 +20,11 @@ public class PlayerImpulse : MonoBehaviour
     [SerializeField] private float[] JumpMultiplifyer;
     [SerializeField] private float jumpForce;
 
-    public void GetImpulse(InputAction.CallbackContext context)
-    {
-        if(context.canceled)
-        {
-            //stateController.SetImpulsed();
-        }
-    }
-
     private void Awake()
     {
         stateController = GetComponent<State>();
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void FixedUpdate()

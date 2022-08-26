@@ -4899,7 +4899,7 @@ Transform:
   m_GameObject: {fileID: 8140213105140464601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.06, y: -2.32, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8140213105645804601}
@@ -4938,6 +4938,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   colliderTrap: {fileID: 8140213105361472934}
+  CollisionAction:
+    m_PersistentCalls:
+      m_Calls: []
+  TriggerAction:
+    m_PersistentCalls:
+      m_Calls: []
+  tagsToCheck: []
+  collisionGameObject: {fileID: 0}
 --- !u!1 &8140213105361472934
 GameObject:
   m_ObjectHideFlags: 0
@@ -5165,7 +5173,7 @@ Transform:
   m_GameObject: {fileID: 8140213105950137489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8140213104385765050}
@@ -9977,7 +9985,7 @@ Transform:
   m_GameObject: {fileID: 8140213106061106832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8140213104385765050}

@@ -10,6 +10,7 @@ public class State : MonoBehaviour
     private PlayerInput playerControls;
     private PlayerHook playerHook;
     private Rigidbody2D body;
+    private PlayerCollider playerLife;
     StateBehavior currentState;
     [SerializeField] private string state;
 
@@ -20,7 +21,8 @@ public class State : MonoBehaviour
         playerControls = GetComponent<PlayerInput>();
         ground = GetComponent<Ground>();
         playerHook = GetComponent<PlayerHook>();
-        currentState = new Idle(anim, playerControls, ground, body, playerHook);
+        playerLife = GetComponent<PlayerCollider>();
+        currentState = new Idle(anim, playerControls, ground, body, playerHook, playerLife);
     }
 
     private void Update()
@@ -39,7 +41,7 @@ public class StateBehavior
 {
     public enum STATE
     {
-        IDLE, WALKING, HOOKING, ONAIR, IMPULSING, IMPULSED
+        IDLE, WALKING, HOOKING, ONAIR, IMPULSING, IMPULSED, ISDEAD
     };
 
     public enum EVENT
@@ -54,15 +56,18 @@ public class StateBehavior
     protected Ground onGround;
     protected Rigidbody2D body;
     protected PlayerHook playerHook;
+    protected PlayerCollider playerLife;
     [SerializeField] protected StateBehavior nextState;
 
-    public StateBehavior(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook)
+    public StateBehavior(Animator _anim, PlayerInput _playerControls, 
+        Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
     {
         anim = _anim;
         playerControls = _playerControls;
         onGround = _ground;
         body = _body;
         playerHook = _playerHook;
+        playerLife = _playerLife;
         stage = EVENT.ENTER;
     }
 
@@ -98,6 +103,8 @@ public class StateBehavior
                 return "Impulsed";
             case STATE.HOOKING:
                 return "Hooking";
+            case STATE.ISDEAD:
+                return "isDead";
         }
 
         return "No State";
@@ -108,8 +115,8 @@ public class Idle : StateBehavior
 {
     private bool isJumping = false;
 
-    public Idle(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook) 
-        : base(_anim, _playerControls, _ground, _body, _playerHook)
+    public Idle(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
+        : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
     {
         name = STATE.IDLE;
     }
@@ -122,31 +129,40 @@ public class Idle : StateBehavior
 
     public override void Update()
     {
-        if (playerControls.actions["Movement"].ReadValue<float>() != 0)
+        if(!playerLife.GetIsDead())
         {
-            nextState = new Walking(anim, playerControls, onGround, body, playerHook);
-            stage = EVENT.EXIT;
+            if (playerControls.actions["Movement"].ReadValue<float>() != 0)
+            {
+                nextState = new Walking(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+            if (playerControls.actions["Jump"].triggered)
+            {
+                isJumping = true;
+            }
+            if (playerControls.actions["Impulse"].triggered)
+            {
+                nextState = new Impulsing(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+            if (playerControls.actions["Hook"].triggered)
+            {
+                nextState = new Hooking(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+
+            if (isJumping && !onGround.GetOnGround())
+            {
+                nextState = new Jumping(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
         }
-        if (playerControls.actions["Jump"].triggered)
+        else
         {
-            isJumping = true;
-        }
-        if (playerControls.actions["Impulse"].triggered)
-        {
-            nextState = new Impulsing(anim, playerControls, onGround, body, playerHook);
-            stage = EVENT.EXIT;
-        }
-        if (playerControls.actions["Hook"].triggered)
-        {
-            nextState = new Hooking(anim, playerControls, onGround, body, playerHook);
+            nextState = new Dead(anim, playerControls, onGround, body, playerHook, playerLife);
             stage = EVENT.EXIT;
         }
 
-        if (isJumping && !onGround.GetOnGround())
-        {
-            nextState = new Jumping(anim, playerControls, onGround, body, playerHook);
-            stage = EVENT.EXIT;
-        }
     }
 
     public override void Exit()
@@ -160,8 +176,8 @@ public class Walking : StateBehavior
 {
     private bool isJumping = false;
 
-    public Walking(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook)
-        : base(_anim, _playerControls, _ground, _body, _playerHook)
+    public Walking(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
+        : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
     {
         name = STATE.WALKING;
     }
@@ -174,29 +190,37 @@ public class Walking : StateBehavior
 
     public override void Update()
     {
-        if(playerControls.actions["Movement"].ReadValue<float>() == 0)
+        if(!playerLife.GetIsDead())
         {
-            nextState = new Idle(anim, playerControls, onGround, body, playerHook);
-            stage = EVENT.EXIT;
-        }
-        if (playerControls.actions["Jump"].triggered)
-        {
-            isJumping = true;
-        }
-        if(playerControls.actions["Impulse"].triggered)
-        {
-            nextState = new Impulsing(anim, playerControls, onGround, body, playerHook);
-            stage = EVENT.EXIT;
-        }
-        if(playerControls.actions["Hook"].triggered)
-        {
-            nextState = new Hooking(anim, playerControls, onGround, body, playerHook);
-            stage = EVENT.EXIT;
-        }
+            if (playerControls.actions["Movement"].ReadValue<float>() == 0)
+            {
+                nextState = new Idle(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+            if (playerControls.actions["Jump"].triggered)
+            {
+                isJumping = true;
+            }
+            if (playerControls.actions["Impulse"].triggered)
+            {
+                nextState = new Impulsing(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+            if (playerControls.actions["Hook"].triggered)
+            {
+                nextState = new Hooking(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
 
-        if(isJumping && !onGround.GetOnGround())
+            if (isJumping && !onGround.GetOnGround())
+            {
+                nextState = new Jumping(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+        }
+        else
         {
-            nextState = new Jumping(anim, playerControls, onGround, body, playerHook);
+            nextState = new Dead(anim, playerControls, onGround, body, playerHook, playerLife);
             stage = EVENT.EXIT;
         }
     }
@@ -210,8 +234,8 @@ public class Walking : StateBehavior
 
 public class Hooking : StateBehavior
 {
-    public Hooking(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook)
-        : base(_anim, _playerControls, _ground, _body, _playerHook)
+    public Hooking(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
+        : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
     {
         name = STATE.HOOKING;
     }
@@ -224,18 +248,26 @@ public class Hooking : StateBehavior
 
     public override void Update()
     {
-        if(!playerHook.hookCreated)
+        if(!playerLife.GetIsDead())
         {
-            if (playerControls.actions["Movement"].ReadValue<float>() == 0)
+            if (!playerHook.hookCreated)
             {
-                nextState = new Idle(anim, playerControls, onGround, body, playerHook);
-                stage = EVENT.EXIT;
+                if (playerControls.actions["Movement"].ReadValue<float>() == 0)
+                {
+                    nextState = new Idle(anim, playerControls, onGround, body, playerHook, playerLife);
+                    stage = EVENT.EXIT;
+                }
+                if (onGround.GetOnGround() && playerControls.actions["Movement"].ReadValue<float>() != 0)
+                {
+                    nextState = new Walking(anim, playerControls, onGround, body, playerHook, playerLife);
+                    stage = EVENT.EXIT;
+                }
             }
-            if (onGround.GetOnGround() && playerControls.actions["Movement"].ReadValue<float>() != 0)
-            {
-                nextState = new Walking(anim, playerControls, onGround, body, playerHook);
-                stage = EVENT.EXIT;
-            }
+        }
+        else
+        {
+            nextState = new Dead(anim, playerControls, onGround, body, playerHook, playerLife);
+            stage = EVENT.EXIT;
         }
     }
 
@@ -248,8 +280,8 @@ public class Hooking : StateBehavior
 
 public class Impulsing : StateBehavior
 {
-    public Impulsing(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook)
-        : base(_anim, _playerControls, _ground, _body, _playerHook)
+    public Impulsing(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
+        : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
     {
         name = STATE.IMPULSING;
     }
@@ -262,9 +294,17 @@ public class Impulsing : StateBehavior
 
     public override void Update()
     {
-        if(playerControls.actions["Impulse"].WasReleasedThisFrame())
+        if(!playerLife.GetIsDead())
         {
-            nextState = new Impulsed(anim, playerControls, onGround, body, playerHook);
+            if (playerControls.actions["Impulse"].WasReleasedThisFrame())
+            {
+                nextState = new Impulsed(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+        }
+        else
+        {
+            nextState = new Dead(anim, playerControls, onGround, body, playerHook, playerLife);
             stage = EVENT.EXIT;
         }
     }
@@ -278,8 +318,8 @@ public class Impulsing : StateBehavior
 
 public class Impulsed : StateBehavior
 {
-    public Impulsed(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook)
-        : base(_anim, _playerControls, _ground, _body, _playerHook)
+    public Impulsed(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
+        : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
     {
         name = STATE.IMPULSED;
     }
@@ -291,9 +331,17 @@ public class Impulsed : StateBehavior
 
     public override void Update()
     {
-        if(!onGround.GetOnGround())
+        if(!playerLife.GetIsDead())
         {
-            nextState = new Jumping(anim, playerControls, onGround, body, playerHook);
+            if (!onGround.GetOnGround())
+            {
+                nextState = new Jumping(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+        }
+        else
+        {
+            nextState = new Dead(anim, playerControls, onGround, body, playerHook, playerLife);
             stage = EVENT.EXIT;
         }
     }
@@ -306,8 +354,8 @@ public class Impulsed : StateBehavior
 
 public class Jumping : StateBehavior
 {
-    public Jumping(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook)
-        : base(_anim, _playerControls, _ground, _body, _playerHook)
+    public Jumping(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
+        : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
     {
         name = STATE.ONAIR;
     }
@@ -320,24 +368,62 @@ public class Jumping : StateBehavior
 
     public override void Update()
     {
-        if(onGround.GetOnGround())
+        if(!playerLife.GetIsDead())
         {
-            if (playerControls.actions["Movement"].ReadValue<float>() == 0)
+            if (onGround.GetOnGround())
             {
-                nextState = new Idle(anim, playerControls, onGround, body, playerHook);
-                stage = EVENT.EXIT;
+                if (playerControls.actions["Movement"].ReadValue<float>() == 0)
+                {
+                    nextState = new Idle(anim, playerControls, onGround, body, playerHook, playerLife);
+                    stage = EVENT.EXIT;
+                }
+                if (playerControls.actions["Movement"].ReadValue<float>() != 0)
+                {
+                    nextState = new Walking(anim, playerControls, onGround, body, playerHook, playerLife);
+                    stage = EVENT.EXIT;
+                }
             }
-            if (playerControls.actions["Movement"].ReadValue<float>() != 0)
-            {
-                nextState = new Walking(anim, playerControls, onGround, body, playerHook);
-                stage = EVENT.EXIT;
-            }
+        }
+        else
+        {
+            nextState = new Dead(anim, playerControls, onGround, body, playerHook, playerLife);
+            stage = EVENT.EXIT;
         }
     }
 
     public override void Exit()
     {
         anim.ResetTrigger("isOnAir");
+        base.Exit();
+    }
+}
+
+public class Dead : StateBehavior
+{
+    public Dead(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
+        : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
+    {
+        name = STATE.ISDEAD;
+    }
+
+    public override void Enter()
+    {
+        anim.SetTrigger("isDead");
+        base.Enter();
+    }
+
+    public override void Update()
+    {
+        if(onGround.GetOnGround() && !playerLife.GetIsDead())
+        {
+            nextState = new Idle(anim, playerControls, onGround, body, playerHook, playerLife);
+            stage = EVENT.EXIT;
+        }
+    }
+
+    public override void Exit()
+    {
+        anim.ResetTrigger("isDead");
         base.Exit();
     }
 }

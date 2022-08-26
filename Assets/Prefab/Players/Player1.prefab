@@ -8165,7 +8165,6 @@ GameObject:
   - component: {fileID: 3269316152659010382}
   - component: {fileID: 6567028394809034431}
   - component: {fileID: 8737217126895370269}
-  - component: {fileID: 261694653773273774}
   - component: {fileID: 8199215657092812730}
   - component: {fileID: 998618902458445186}
   - component: {fileID: 7111138699957203666}
@@ -8244,6 +8243,8 @@ MonoBehaviour:
   hookObj: {fileID: 8502226302226753383, guid: a4efde55213672a4ca5c9f42ea908786, type: 3}
   RightHookSpawn: {fileID: 7346405114207564671}
   LeftHookSpawn: {fileID: 7585515940134096611}
+  hookCreated: 0
+  MaxHooksAtSameTime: 0
 --- !u!114 &3269316152659010382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8262,8 +8263,8 @@ MonoBehaviour:
   - 0.4
   JumpMultiplifyer:
   - 1
-  - 2
-  - 3
+  - 4
+  - 6
   jumpForce: 3
 --- !u!114 &6567028394809034431
 MonoBehaviour:
@@ -8290,20 +8291,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpawn: {fileID: 0}
---- !u!114 &261694653773273774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7803077663924794531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa2490e2befe1c4a83cb9a9ffaf5553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1201507909983250091}
-  state: 
 --- !u!114 &8199215657092812730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8316,6 +8303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52cf0a955443fb245bf87c90276de9b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 
 --- !u!114 &998618902458445186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8355,7 +8343,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 261694653773273774}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StateController, Assembly-CSharp
         m_MethodName: SetWalk
         m_Mode: 1
@@ -8383,7 +8371,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 261694653773273774}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StateController, Assembly-CSharp
         m_MethodName: SetJump
         m_Mode: 1
@@ -8411,7 +8399,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 261694653773273774}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StateController, Assembly-CSharp
         m_MethodName: SetHook
         m_Mode: 1
@@ -8439,7 +8427,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 261694653773273774}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StateController, Assembly-CSharp
         m_MethodName: SetImpulsing
         m_Mode: 1

@@ -5,17 +5,11 @@ using UnityEngine;
 public class PlayerCollider : MonoBehaviour
 {
     [SerializeField] private Transform playerSpawn;
+    private bool isDead;
 
-    // Start is called before the first frame update
-    void Start()
+    public bool GetIsDead()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return isDead;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,8 +21,8 @@ public class PlayerCollider : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Trap"))
         {
-            if (collision.gameObject.transform.parent.GetComponent<TrapController>().GetActive())
-                this.transform.position = playerSpawn.position;
+            if (collision.gameObject.transform.parent.GetComponent<TrapController>().GetActive() && !isDead)
+                StartCoroutine(DeadAction());
         }
     }
 
@@ -36,8 +30,19 @@ public class PlayerCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
-            if (collision.gameObject.transform.root.GetComponent<TrapController>().GetActive())
-                this.transform.position = playerSpawn.position;
+            if (collision.gameObject.transform.root.GetComponent<TrapController>().GetActive() && !isDead)
+                StartCoroutine(DeadAction());
         }
+    }
+
+    private IEnumerator DeadAction()
+    {
+        isDead = true;
+
+        yield return new WaitForSeconds(1.75f);
+
+        this.transform.position = playerSpawn.position;
+
+        isDead = false;
     }
 }

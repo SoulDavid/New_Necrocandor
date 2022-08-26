@@ -56,7 +56,7 @@ public class PlayerHook : MonoBehaviour
             desiredHook = false;
         }
 
-        if(StateController.GetState() != "Hooking") 
+        if(StateController.GetState() != "Hooking" && StateController.GetState() != "isDead") 
         {
             MaxHooksAtSameTime = 0;
         }

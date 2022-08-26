@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Salas/Scene_Pasillo.unity
     guid: 136bcbc17a880f443a67bf17289fd58e
+  - enabled: 1
+    path: Assets/Scenes/Salas/Scene_Kitchen.unity
+    guid: b9a7acc975c86d74eba23c5943ab617e
   m_configObjects: {}

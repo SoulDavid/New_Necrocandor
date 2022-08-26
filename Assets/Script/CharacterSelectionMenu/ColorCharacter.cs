@@ -55,7 +55,7 @@ public class ColorCharacter : MonoBehaviour
 
         if(gameManager.GetReadyToStart())
         {
-            SceneManager.LoadScene("Scene_Pasillo");
+            SceneManager.LoadScene("Scene_Kitchen");
         }
     }
 

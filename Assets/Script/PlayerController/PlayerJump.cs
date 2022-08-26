@@ -24,10 +24,13 @@ public class PlayerJump : MonoBehaviour
     [SerializeField]
     private bool onGround;
 
+    private State stateController;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
+        stateController = GetComponent<State>();
         defaultGravityScale = 1f;
     }
 
@@ -71,11 +74,15 @@ public class PlayerJump : MonoBehaviour
 
     private void JumpAction()
     {
-        if(onGround || jumpPhase < maxAirJumps)
+        if (stateController.GetState() != "isDead" && stateController.GetState() != "Impulsing" && stateController.GetState() != "Hooking")
         {
-            jumpPhase += 1;
-            float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpHeight);
-            velocity.y += jumpSpeed;
+            if (onGround || jumpPhase < maxAirJumps)
+            {
+                jumpPhase += 1;
+                float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpHeight);
+                velocity.y += jumpSpeed;
+            }
         }
+
     }
 }
