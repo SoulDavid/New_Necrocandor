@@ -12,6 +12,7 @@ public class State : MonoBehaviour
     private Rigidbody2D body;
     private PlayerCollider playerLife;
     StateBehavior currentState;
+    [SerializeField] private int id;
     [SerializeField] private string state;
 
     private void Start()
@@ -23,6 +24,16 @@ public class State : MonoBehaviour
         playerHook = GetComponent<PlayerHook>();
         playerLife = GetComponent<PlayerCollider>();
         currentState = new Idle(anim, playerControls, ground, body, playerHook, playerLife);
+    }
+
+    public void SetId(int _id)
+    {
+        id = _id;
+    }
+
+    public int GetId()
+    {
+        return id;
     }
 
     private void Update()

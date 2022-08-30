@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Platform_Buttons : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Platform_Buttons : MonoBehaviour
     public Platform_Buttons pairButtons;
 
     [SerializeField] private bool is_activated;
+    [SerializeField] private string[] tagsToCheck;
     [SerializeField] private Animator anim;
 
     // Start is called before the first frame update
@@ -26,7 +28,7 @@ public class Platform_Buttons : MonoBehaviour
         is_activated = true;
         anim.SetBool("isPressed", is_activated);
 
-        if(collision.CompareTag("Player") || collision.CompareTag("Hook"))
+        if(tagsToCheck.Contains(collision.tag))
         {
             switch(typeButton)
             {
@@ -63,7 +65,7 @@ public class Platform_Buttons : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") || collision.CompareTag("Hook"))
+        if(tagsToCheck.Contains(collision.tag))
         {
             switch(typeButton)
             {

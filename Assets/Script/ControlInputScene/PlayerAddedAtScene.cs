@@ -38,6 +38,7 @@ public class PlayerAddedAtScene : MonoBehaviour
         else
             _id = 1;
 
+        playerInput.gameObject.transform.root.GetComponent<State>().SetId(_id);
         //playerInput.gameObject.transform.GetChild(0).GetComponent<StartLevel>().SetId(_id);
         playerInput.gameObject.transform.position = prefabSpawns[playerSpawned].position;
     }

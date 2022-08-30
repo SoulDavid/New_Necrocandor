@@ -410,7 +410,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3622236632172353043}
   - component: {fileID: 1201507909983250091}
-  - component: {fileID: 9149269279390170453}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -456,45 +455,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9149269279390170453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2314206953012574602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89aa357d504621d4e80cf56cb21898fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body:
-  - {fileID: 7803077663250859029}
-  - {fileID: 7803077662362991610}
-  - {fileID: 7803077663783109024}
-  - {fileID: 7803077663888070496}
-  - {fileID: 7803077663188616661}
-  - {fileID: 7803077662790936886}
-  - {fileID: 7803077662064122158}
-  - {fileID: 7803077662291606237}
-  - {fileID: 7803077663468376756}
-  - {fileID: 7803077662842219298}
-  - {fileID: 7803077662187600885}
-  - {fileID: 7803077663719687312}
-  - {fileID: 7803077663381004087}
-  - {fileID: 7803077663743913151}
-  - {fileID: 7803077662324325362}
-  - {fileID: 7803077663859467321}
-  - {fileID: 7803077662170422402}
-  - {fileID: 7803077663602628555}
-  - {fileID: 7803077663665382658}
-  - {fileID: 7803077664007274648}
-  - {fileID: 7803077662948162981}
-  - {fileID: 7803077661978325031}
-  - {fileID: 7803077662112215246}
-  - {fileID: 7803077663469465679}
-  _id: 0
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &4031282028481700852
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077661978325028}
   - component: {fileID: 7803077661978325031}
+  - component: {fileID: 7098835229651107142}
   - component: {fileID: 7803077661978325029}
   m_Layer: 0
   m_Name: MeniqueManoD1
@@ -923,6 +884,20 @@ MonoBehaviour:
   m_SortingOrder: 36
   m_BoneTransforms:
   - {fileID: 7803077663903811384}
+--- !u!114 &7098835229651107142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077661978325051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077661978325029
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1301,6 +1276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662064122147}
   - component: {fileID: 7803077662064122158}
+  - component: {fileID: 1385805597146559417}
   - component: {fileID: 7803077662064122156}
   m_Layer: 0
   m_Name: CorazonManoI1
@@ -1345,6 +1321,20 @@ MonoBehaviour:
   m_SortingOrder: 16
   m_BoneTransforms:
   - {fileID: 7803077662849823902}
+--- !u!114 &1385805597146559417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662064122146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662064122156
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1409,6 +1399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662112215235}
   - component: {fileID: 7803077662112215246}
+  - component: {fileID: 1938678369260843855}
   - component: {fileID: 7803077662112215244}
   m_Layer: 0
   m_Name: MeniqueManoD2
@@ -1452,6 +1443,20 @@ MonoBehaviour:
   m_SortingOrder: 33
   m_BoneTransforms:
   - {fileID: 7803077663921942001}
+--- !u!114 &1938678369260843855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662112215234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662112215244
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1632,6 +1637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662170422407}
   - component: {fileID: 7803077662170422402}
+  - component: {fileID: 4670200791272965141}
   - component: {fileID: 7803077662170422400}
   m_Layer: 0
   m_Name: PulgarManoD3
@@ -1675,6 +1681,20 @@ MonoBehaviour:
   m_SortingOrder: 30
   m_BoneTransforms:
   - {fileID: 7803077663792174672}
+--- !u!114 &4670200791272965141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662170422406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662170422400
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1739,6 +1759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662187600778}
   - component: {fileID: 7803077662187600885}
+  - component: {fileID: 3564750542170462202}
   - component: {fileID: 7803077662187600779}
   m_Layer: 0
   m_Name: MeniqueManoI1
@@ -1783,6 +1804,20 @@ MonoBehaviour:
   m_SortingOrder: 14
   m_BoneTransforms:
   - {fileID: 7803077662888436920}
+--- !u!114 &3564750542170462202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662187600777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662187600779
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -2053,6 +2088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662291606226}
   - component: {fileID: 7803077662291606237}
+  - component: {fileID: 1081361789454157939}
   - component: {fileID: 7803077662291606227}
   m_Layer: 0
   m_Name: CorazonManoI2
@@ -2096,6 +2132,20 @@ MonoBehaviour:
   m_SortingOrder: 15
   m_BoneTransforms:
   - {fileID: 7803077662906742914}
+--- !u!114 &1081361789454157939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662291606225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662291606227
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -2362,6 +2412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662324325367}
   - component: {fileID: 7803077662324325362}
+  - component: {fileID: 2724498403352893351}
   - component: {fileID: 7803077662324325360}
   m_Layer: 0
   m_Name: PulgarManoD1
@@ -2406,6 +2457,20 @@ MonoBehaviour:
   m_SortingOrder: 32
   m_BoneTransforms:
   - {fileID: 7803077662343091307}
+--- !u!114 &2724498403352893351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662324325366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662324325360
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -2658,6 +2723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662362991615}
   - component: {fileID: 7803077662362991610}
+  - component: {fileID: 1806250410314270889}
   - component: {fileID: 7803077662362991608}
   m_Layer: 0
   m_Name: AntebrazoIAtras
@@ -2701,6 +2767,20 @@ MonoBehaviour:
   m_SortingOrder: 0
   m_BoneTransforms:
   - {fileID: 7803077663797771745}
+--- !u!114 &1806250410314270889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662362991614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662362991608
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -3494,6 +3574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662790937035}
   - component: {fileID: 7803077662790936886}
+  - component: {fileID: 6029206305272459011}
   - component: {fileID: 7803077662790936884}
   m_Layer: 0
   m_Name: PulgarManoI3
@@ -3537,6 +3618,20 @@ MonoBehaviour:
   m_SortingOrder: 20
   m_BoneTransforms:
   - {fileID: 7803077663134743790}
+--- !u!114 &6029206305272459011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662790937034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662790936884
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -3650,6 +3745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662842219303}
   - component: {fileID: 7803077662842219298}
+  - component: {fileID: 9019697312681318625}
   - component: {fileID: 7803077662842219296}
   m_Layer: 0
   m_Name: IndiceManoI2
@@ -3693,6 +3789,20 @@ MonoBehaviour:
   m_SortingOrder: 17
   m_BoneTransforms:
   - {fileID: 7803077663816624414}
+--- !u!114 &9019697312681318625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662842219302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662842219296
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -4107,6 +4217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077662948163002}
   - component: {fileID: 7803077662948162981}
+  - component: {fileID: 8808024707415895600}
   - component: {fileID: 7803077662948163003}
   m_Layer: 0
   m_Name: CorazonManoD2
@@ -4150,6 +4261,20 @@ MonoBehaviour:
   m_SortingOrder: 34
   m_BoneTransforms:
   - {fileID: 7803077663751055110}
+--- !u!114 &8808024707415895600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077662948163001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077662948163003
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -4926,6 +5051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663188616682}
   - component: {fileID: 7803077663188616661}
+  - component: {fileID: 4691765124768079035}
   - component: {fileID: 7803077663188616683}
   m_Layer: 0
   m_Name: PulgarManoI2
@@ -4970,6 +5096,20 @@ MonoBehaviour:
   m_SortingOrder: 21
   m_BoneTransforms:
   - {fileID: 7803077662295922458}
+--- !u!114 &4691765124768079035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663188616681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663188616683
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -5243,6 +5383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663250859050}
   - component: {fileID: 7803077663250859029}
+  - component: {fileID: 1465909384771957435}
   - component: {fileID: 7803077663250859051}
   m_Layer: 0
   m_Name: AntebrazoI
@@ -5288,6 +5429,20 @@ MonoBehaviour:
   m_SortingOrder: 20
   m_BoneTransforms:
   - {fileID: 7803077663797771745}
+--- !u!114 &1465909384771957435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663250859049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663250859051
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -5665,6 +5820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663381004084}
   - component: {fileID: 7803077663381004087}
+  - component: {fileID: 3048898084687367030}
   - component: {fileID: 7803077663381004085}
   m_Layer: 0
   m_Name: AntebrazoD
@@ -5709,6 +5865,20 @@ MonoBehaviour:
   m_SortingOrder: 40
   m_BoneTransforms:
   - {fileID: 7803077663515878858}
+--- !u!114 &3048898084687367030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663381004235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663381004085
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -5881,6 +6051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663468376393}
   - component: {fileID: 7803077663468376756}
+  - component: {fileID: 8709817750034797854}
   - component: {fileID: 7803077663468376394}
   m_Layer: 0
   m_Name: IndiceManoI1
@@ -5925,6 +6096,20 @@ MonoBehaviour:
   m_SortingOrder: 18
   m_BoneTransforms:
   - {fileID: 7803077663648890674}
+--- !u!114 &8709817750034797854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663468376392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663468376394
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -5989,6 +6174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663469465676}
   - component: {fileID: 7803077663469465679}
+  - component: {fileID: 1661174371999479735}
   - component: {fileID: 7803077663469465677}
   m_Layer: 0
   m_Name: Casco
@@ -6035,6 +6221,20 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 7803077662990351971}
   - {fileID: 7803077663326194861}
+--- !u!114 &1661174371999479735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663469465667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663469465677
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -6405,6 +6605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663602628552}
   - component: {fileID: 7803077663602628555}
+  - component: {fileID: 4020934383454250}
   - component: {fileID: 7803077663602628553}
   m_Layer: 0
   m_Name: IndiceManoD1
@@ -6449,6 +6650,20 @@ MonoBehaviour:
   m_SortingOrder: 37
   m_BoneTransforms:
   - {fileID: 7803077663136204992}
+--- !u!114 &4020934383454250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663602628559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663602628553
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -6663,6 +6878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663665382663}
   - component: {fileID: 7803077663665382658}
+  - component: {fileID: 1238239348039736515}
   - component: {fileID: 7803077663665382656}
   m_Layer: 0
   m_Name: IndiceManoD2
@@ -6706,6 +6922,20 @@ MonoBehaviour:
   m_SortingOrder: 35
   m_BoneTransforms:
   - {fileID: 7803077662858540097}
+--- !u!114 &1238239348039736515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663665382662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663665382656
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -6868,6 +7098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663719687317}
   - component: {fileID: 7803077663719687312}
+  - component: {fileID: 6367072318780868563}
   - component: {fileID: 7803077663719687318}
   m_Layer: 0
   m_Name: MeniqueManoI2
@@ -6911,6 +7142,20 @@ MonoBehaviour:
   m_SortingOrder: 13
   m_BoneTransforms:
   - {fileID: 7803077662972590352}
+--- !u!114 &6367072318780868563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663719687316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663719687318
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -7083,6 +7328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663743913148}
   - component: {fileID: 7803077663743913151}
+  - component: {fileID: 4484343631395623117}
   - component: {fileID: 7803077663743913149}
   m_Layer: 0
   m_Name: ManoD
@@ -7133,6 +7379,20 @@ MonoBehaviour:
   - {fileID: 7803077662252523216}
   - {fileID: 7803077663666063813}
   - {fileID: 7803077663825080783}
+--- !u!114 &4484343631395623117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663743913139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663743913149
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -7248,6 +7508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663783109029}
   - component: {fileID: 7803077663783109024}
+  - component: {fileID: 566364641542650637}
   - component: {fileID: 7803077663783109030}
   m_Layer: 0
   m_Name: ManoI
@@ -7296,6 +7557,20 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 7803077662969783853}
   - {fileID: 7803077663536529841}
+--- !u!114 &566364641542650637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663783109028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663783109030
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -7555,6 +7830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663859467326}
   - component: {fileID: 7803077663859467321}
+  - component: {fileID: 2401815770318145866}
   - component: {fileID: 7803077663859467327}
   m_Layer: 0
   m_Name: PulgarManoD2
@@ -7599,6 +7875,20 @@ MonoBehaviour:
   m_SortingOrder: 31
   m_BoneTransforms:
   - {fileID: 7803077662978929947}
+--- !u!114 &2401815770318145866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663859467325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663859467327
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -7953,6 +8243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077663888070501}
   - component: {fileID: 7803077663888070496}
+  - component: {fileID: 4534891905424247983}
   - component: {fileID: 7803077663888070502}
   m_Layer: 0
   m_Name: PulgarManoI1
@@ -7997,6 +8288,20 @@ MonoBehaviour:
   m_SortingOrder: 22
   m_BoneTransforms:
   - {fileID: 7803077663970375988}
+--- !u!114 &4534891905424247983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663888070500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077663888070502
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -8385,6 +8690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   siteToGrab: {fileID: 6599927529673314894}
   isHolding: 0
+  speed: 1
 --- !u!114 &998618902458445186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8671,6 +8977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803077664007274653}
   - component: {fileID: 7803077664007274648}
+  - component: {fileID: 6277472460810757356}
   - component: {fileID: 7803077664007274654}
   m_Layer: 0
   m_Name: CorazonManoD1
@@ -8715,6 +9022,20 @@ MonoBehaviour:
   m_SortingOrder: 38
   m_BoneTransforms:
   - {fileID: 7803077662241954363}
+--- !u!114 &6277472460810757356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077664007274652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d809ec4ced774d990d885181c4999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  id: 0
 --- !u!137 &7803077664007274654
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

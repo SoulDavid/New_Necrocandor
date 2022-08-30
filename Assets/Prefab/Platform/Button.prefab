@@ -130,6 +130,10 @@ MonoBehaviour:
   - {fileID: 0}
   pairButtons: {fileID: 0}
   is_activated: 0
+  tagsToCheck:
+  - Player
+  - Hook
+  - HoldableObject
   anim: {fileID: 0}
 --- !u!95 &8365071074099470592
 Animator:
