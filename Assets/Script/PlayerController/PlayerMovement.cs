@@ -50,11 +50,13 @@ public class PlayerMovement : MonoBehaviour
         {
             case "LEFT":
                 currentDirection = Direction.LEFT;
-                transform.GetChild(0).localScale = new Vector3(1, 1);
+                transform.GetChild(0).localScale = new Vector2(1, 1);
+                transform.GetChild(3).localScale = new Vector2(1, 1);
                 break;
             case "RIGHT":
                 currentDirection = Direction.RIGHT;
                 transform.GetChild(0).localScale = new Vector2(-1, 1);
+                transform.GetChild(3).localScale = new Vector2(-1, 1);
                 break;
             default:
                 Debug.LogError("Esta direccion de movimiento no existe");

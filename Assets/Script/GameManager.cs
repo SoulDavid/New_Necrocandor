@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Color[] colorPlayers;
     [SerializeField] private string[] currentControlSchemes;
     [SerializeField] private bool[] ReadyToStart;
+    [SerializeField] private float rigidbodyGravity;
 
     private void Awake()
     {
@@ -62,5 +63,15 @@ public class GameManager : MonoBehaviour
         }
 
         return true;
+    }
+
+    public float GetGravityBody()
+    {
+        return rigidbodyGravity;
+    }
+
+    public void SetGravityBody(float _gravity)
+    {
+        rigidbodyGravity = _gravity;
     }
 }

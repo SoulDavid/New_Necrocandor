@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerImpulse : MonoBehaviour
 {
-    //private PlayerStates playerState;
     private State stateController;
     private Rigidbody2D body;
     private Ground ground;

@@ -41,7 +41,7 @@ public class StateBehavior
 {
     public enum STATE
     {
-        IDLE, WALKING, HOOKING, ONAIR, IMPULSING, IMPULSED, ISDEAD
+        IDLE, WALKING, HOOKING, ONAIR, IMPULSING, IMPULSED, ISDEAD, HOLDING, THROWING
     };
 
     public enum EVENT
@@ -105,6 +105,10 @@ public class StateBehavior
                 return "Hooking";
             case STATE.ISDEAD:
                 return "isDead";
+            case STATE.HOLDING:
+                return "Holding";
+            case STATE.THROWING:
+                return "Throwing";
         }
 
         return "No State";
@@ -148,6 +152,12 @@ public class Idle : StateBehavior
             if (playerControls.actions["Hook"].triggered)
             {
                 nextState = new Hooking(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+
+            if(playerControls.actions["Hold"].triggered && playerLife.GetCanHold())
+            {
+                nextState = new Holding(anim, playerControls, onGround, body, playerHook, playerLife);
                 stage = EVENT.EXIT;
             }
 
@@ -427,3 +437,79 @@ public class Dead : StateBehavior
         base.Exit();
     }
 }
+
+public class Holding : StateBehavior
+{
+    public Holding(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
+        : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
+    {
+        name = STATE.HOLDING;
+    }
+
+    public override void Enter()
+    {
+        anim.SetTrigger("isHolding");
+        base.Enter();
+    }
+
+    public override void Update()
+    {
+        if (!playerLife.GetIsDead())
+        {
+            if (playerControls.actions["Hold"].WasReleasedThisFrame())
+            {
+                nextState = new Idle(anim, playerControls, onGround, body, playerHook, playerLife);
+                stage = EVENT.EXIT;
+            }
+        }
+        else
+        {
+            nextState = new Dead(anim, playerControls, onGround, body, playerHook, playerLife);
+            stage = EVENT.EXIT;
+        }
+    }
+
+    public override void Exit()
+    {
+        anim.ResetTrigger("isHolding");
+        base.Exit();
+    }
+}
+
+//public class Throwing : StateBehavior
+//{
+//    public Throwing(Animator _anim, PlayerInput _playerControls, Ground _ground, Rigidbody2D _body, PlayerHook _playerHook, PlayerCollider _playerLife)
+//        : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
+//    {
+//        name = STATE.THROWING;
+//    }
+
+//    public override void Enter()
+//    {
+//        anim.SetTrigger("isThrowing");
+//        base.Enter();
+//    }
+
+//    public override void Update()
+//    {
+//        if (!playerLife.GetIsDead())
+//        {
+//            if (!playerLife.GetCanHold() && playerLife.GetElementToThrow() == null)
+//            {
+//                nextState = new Idle(anim, playerControls, onGround, body, playerHook, playerLife);
+//                stage = EVENT.EXIT;
+//            }
+//        }
+//        else
+//        {
+//            nextState = new Dead(anim, playerControls, onGround, body, playerHook, playerLife);
+//            stage = EVENT.EXIT;
+//        }
+//    }
+
+//    public override void Exit()
+//    {
+//        anim.SetTrigger("isThrowing");
+//        base.Exit();
+//    }
+//}

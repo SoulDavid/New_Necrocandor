@@ -50,13 +50,13 @@ public class PlayerHook : MonoBehaviour
     {
         onGround = ground.GetOnGround();
 
-        if(desiredHook)
+        if(desiredHook && StateController.GetState() == "Hooking")
         {
             HookAction();
             desiredHook = false;
         }
 
-        if(StateController.GetState() != "Hooking" && StateController.GetState() != "isDead") 
+        if(StateController.GetState() != "Hooking" && StateController.GetState() != "isDead" && !hookCreated) 
         {
             MaxHooksAtSameTime = 0;
         }

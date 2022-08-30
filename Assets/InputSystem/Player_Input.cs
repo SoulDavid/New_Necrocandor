@@ -62,6 +62,15 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hold"",
+                    ""type"": ""Button"",
+                    ""id"": ""c2905848-2ac8-4333-b5a9-a8b1164a4317"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -194,6 +203,28 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Impulse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0041d16f-cfa9-4edc-88dd-5991f541f1c9"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d3d66f2a-0b86-4bfb-9357-f036dfb70e84"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -363,6 +394,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Hook = m_Player.FindAction("Hook", throwIfNotFound: true);
         m_Player_Impulse = m_Player.FindAction("Impulse", throwIfNotFound: true);
+        m_Player_Hold = m_Player.FindAction("Hold", throwIfNotFound: true);
         // SelectionCharacter
         m_SelectionCharacter = asset.FindActionMap("SelectionCharacter", throwIfNotFound: true);
         m_SelectionCharacter_ChangeColorRight = m_SelectionCharacter.FindAction("ChangeColorRight", throwIfNotFound: true);
@@ -432,6 +464,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Hook;
     private readonly InputAction m_Player_Impulse;
+    private readonly InputAction m_Player_Hold;
     public struct PlayerActions
     {
         private @Player_Input m_Wrapper;
@@ -440,6 +473,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Hook => m_Wrapper.m_Player_Hook;
         public InputAction @Impulse => m_Wrapper.m_Player_Impulse;
+        public InputAction @Hold => m_Wrapper.m_Player_Hold;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -461,6 +495,9 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 @Impulse.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnImpulse;
                 @Impulse.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnImpulse;
                 @Impulse.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnImpulse;
+                @Hold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHold;
+                @Hold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHold;
+                @Hold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHold;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -477,6 +514,9 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 @Impulse.started += instance.OnImpulse;
                 @Impulse.performed += instance.OnImpulse;
                 @Impulse.canceled += instance.OnImpulse;
+                @Hold.started += instance.OnHold;
+                @Hold.performed += instance.OnHold;
+                @Hold.canceled += instance.OnHold;
             }
         }
     }
@@ -562,6 +602,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnHook(InputAction.CallbackContext context);
         void OnImpulse(InputAction.CallbackContext context);
+        void OnHold(InputAction.CallbackContext context);
     }
     public interface ISelectionCharacterActions
     {

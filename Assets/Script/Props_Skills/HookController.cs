@@ -17,6 +17,8 @@ public class HookController : MonoBehaviour
     private Rigidbody2D rb_caster;
     [SerializeField]
     private LineRenderer line;
+    [SerializeField]
+    private SpriteRenderer spriteRender;
     private bool hasCollided;
 
     private int direction;
@@ -25,6 +27,7 @@ public class HookController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spriteRender = transform.GetChild(0).GetComponent<SpriteRenderer>();
         line = transform.GetChild(1).GetComponent<LineRenderer>();
     }
 
@@ -76,7 +79,7 @@ public class HookController : MonoBehaviour
                     transform.Translate(Vector2.right * speed * Time.deltaTime);
                     break;
                 case 1:
-                    //direction.flipX = false;
+                    spriteRender.flipX = false;
                     transform.Translate(Vector2.left * speed * Time.deltaTime);
                     break;
             }
@@ -124,6 +127,11 @@ public class HookController : MonoBehaviour
                     break;
 
                 case 1:
+                    caster.root.gameObject.GetComponent<PlayerHook>().hookCreated = false;
+                    Destroy(gameObject);
+                    break;
+
+                case 2:
                     caster.root.gameObject.GetComponent<PlayerHook>().hookCreated = false;
                     Destroy(gameObject);
                     break;
