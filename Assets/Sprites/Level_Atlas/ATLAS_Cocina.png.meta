@@ -119,10 +119,10 @@ TextureImporter:
       name: ATLAS_Cocina_0
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2836
-        width: 589
-        height: 149
+        x: 150
+        y: 2851
+        width: 578
+        height: 143
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: ATLAS_Cocina_1
       rect:
         serializedVersion: 2
-        x: 940
-        y: 2884
-        width: 284
-        height: 198
+        x: 936
+        y: 2880
+        width: 291
+        height: 205
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: ATLAS_Cocina_2
       rect:
         serializedVersion: 2
-        x: 1369
+        x: 1358
         y: 2910
-        width: 378
-        height: 206
+        width: 387
+        height: 210
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: ATLAS_Cocina_3
       rect:
         serializedVersion: 2
-        x: 1997
-        y: 2949
-        width: 634
-        height: 142
+        x: 1992
+        y: 2948
+        width: 643
+        height: 145
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,9 +203,9 @@ TextureImporter:
       name: ATLAS_Cocina_4
       rect:
         serializedVersion: 2
-        x: 2727
-        y: 2949
-        width: 634
+        x: 2724
+        y: 2948
+        width: 636
         height: 142
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -224,10 +224,10 @@ TextureImporter:
       name: ATLAS_Cocina_5
       rect:
         serializedVersion: 2
-        x: 3379
-        y: 2841
-        width: 651
-        height: 339
+        x: 3378
+        y: 2829
+        width: 657
+        height: 359
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: ATLAS_Cocina_6
       rect:
         serializedVersion: 2
-        x: 100
-        y: 2597
-        width: 935
-        height: 148
+        x: 186
+        y: 2250
+        width: 433
+        height: 178
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: ATLAS_Cocina_7
       rect:
         serializedVersion: 2
-        x: 1287
-        y: 2532
+        x: 1286
+        y: 2530
         width: 307
-        height: 169
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: ATLAS_Cocina_8
       rect:
         serializedVersion: 2
-        x: 1711
-        y: 2532
-        width: 302
-        height: 113
+        x: 1286
+        y: 2192
+        width: 307
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,14 +308,36 @@ TextureImporter:
       name: ATLAS_Cocina_9
       rect:
         serializedVersion: 2
-        x: 2084
-        y: 2009
-        width: 1401
-        height: 850
+        x: 2077
+        y: 2004
+        width: 646
+        height: 828
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -112.0976, y: 413.45862}
+        - {x: -316.89056, y: 254.40448}
+        - {x: -316.89056, y: -324.15497}
+        - {x: -304.96088, y: -409.64658}
+        - {x: 323, y: -409.64658}
+        - {x: 323, y: 331.94336}
+        - {x: 142.40239, y: 413.45862}
+      - - {x: -322.8554, y: -151.1836}
+        - {x: -322.8554, y: -175.04172}
+        - {x: -316.89056, y: -173.05353}
+        - {x: -308.93744, y: -159.13629}
+        - {x: -308.93744, y: -155.15994}
+        - {x: -316.89056, y: -151.1836}
+      - - {x: -322.8554, y: -149.19542}
+        - {x: -316.89056, y: -147.20723}
+        - {x: -316.89056, y: -137.26636}
+        - {x: -320.86713, y: -133.29}
+        - {x: -322.8554, y: -133.29}
+      - - {x: -316.89056, y: -127.32547}
+        - {x: -316.89056, y: -121.36094}
+        - {x: -322.8554, y: -119.372765}
+        - {x: -322.8554, y: -129.31364}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -329,10 +351,10 @@ TextureImporter:
       name: ATLAS_Cocina_10
       rect:
         serializedVersion: 2
-        x: 3793
-        y: 1953
-        width: 179
-        height: 696
+        x: 2772
+        y: 2004
+        width: 637
+        height: 830
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,10 +372,10 @@ TextureImporter:
       name: ATLAS_Cocina_11
       rect:
         serializedVersion: 2
-        x: 1287
-        y: 2196
-        width: 307
-        height: 169
+        x: 3584
+        y: 1946
+        width: 144
+        height: 651
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,10 +393,10 @@ TextureImporter:
       name: ATLAS_Cocina_12
       rect:
         serializedVersion: 2
-        x: 1442
-        y: 2517
-        width: 5
-        height: 4
+        x: 102
+        y: 1095
+        width: 1893
+        height: 1034
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,10 +414,10 @@ TextureImporter:
       name: ATLAS_Cocina_13
       rect:
         serializedVersion: 2
-        x: 3590
-        y: 1953
-        width: 131
-        height: 637
+        x: 137
+        y: 2600
+        width: 892
+        height: 152
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,34 +432,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ATLAS_Cocina_14
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 2246
-        width: 449
-        height: 184
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 600d03718d82f7f4b83fa04123dc1d33
-      internalID: -88640605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ATLAS_Cocina_15
       rect:
         serializedVersion: 2
-        x: 757
-        y: 2246
-        width: 302
-        height: 186
+        x: 2451
+        y: 1658
+        width: 188
+        height: 313
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,10 +456,10 @@ TextureImporter:
       name: ATLAS_Cocina_16
       rect:
         serializedVersion: 2
-        x: 120
-        y: 1110
-        width: 1824
-        height: 994
+        x: 2756
+        y: 1655
+        width: 657
+        height: 301
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,10 +477,10 @@ TextureImporter:
       name: ATLAS_Cocina_17
       rect:
         serializedVersion: 2
-        x: 2182
-        y: 1649
-        width: 135
-        height: 199
+        x: 3781
+        y: 1946
+        width: 219
+        height: 718
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,34 +495,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ATLAS_Cocina_18
-      rect:
-        serializedVersion: 2
-        x: 2339
-        y: 1671
-        width: 94
-        height: 155
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35adcf7c627ead14c85b68877590af36
-      internalID: 207886538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ATLAS_Cocina_19
       rect:
         serializedVersion: 2
-        x: 2463
-        y: 1671
-        width: 168
-        height: 286
+        x: 2105
+        y: 353
+        width: 657
+        height: 435
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,10 +519,10 @@ TextureImporter:
       name: ATLAS_Cocina_20
       rect:
         serializedVersion: 2
-        x: 2808
-        y: 1671
-        width: 537
-        height: 270
+        x: 2102
+        y: 878
+        width: 634
+        height: 652
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -560,10 +540,10 @@ TextureImporter:
       name: ATLAS_Cocina_21
       rect:
         serializedVersion: 2
-        x: 3413
-        y: 1216
-        width: 612
-        height: 612
+        x: 2168
+        y: 1639
+        width: 152
+        height: 217
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -581,10 +561,10 @@ TextureImporter:
       name: ATLAS_Cocina_22
       rect:
         serializedVersion: 2
-        x: 2113
-        y: 874
-        width: 604
-        height: 662
+        x: 2330
+        y: 1658
+        width: 112
+        height: 176
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -602,10 +582,10 @@ TextureImporter:
       name: ATLAS_Cocina_23
       rect:
         serializedVersion: 2
-        x: 2783
-        y: 1341
-        width: 304
-        height: 223
+        x: 3415
+        y: 1204
+        width: 629
+        height: 643
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +603,10 @@ TextureImporter:
       name: ATLAS_Cocina_24
       rect:
         serializedVersion: 2
-        x: 3156
-        y: 1347
-        width: 167
-        height: 211
+        x: 33
+        y: 61
+        width: 1998
+        height: 989
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -644,10 +624,10 @@ TextureImporter:
       name: ATLAS_Cocina_25
       rect:
         serializedVersion: 2
-        x: 31
-        y: 57
-        width: 2004
-        height: 1006
+        x: 2810
+        y: 835
+        width: 324
+        height: 398
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -665,10 +645,10 @@ TextureImporter:
       name: ATLAS_Cocina_26
       rect:
         serializedVersion: 2
-        x: 2820
-        y: 842
-        width: 300
-        height: 378
+        x: 2108
+        y: 96
+        width: 631
+        height: 226
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -686,10 +666,10 @@ TextureImporter:
       name: ATLAS_Cocina_27
       rect:
         serializedVersion: 2
-        x: 3215
-        y: 894
-        width: 138
-        height: 248
+        x: 3407
+        y: 494
+        width: 628
+        height: 642
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -707,10 +687,10 @@ TextureImporter:
       name: ATLAS_Cocina_28
       rect:
         serializedVersion: 2
-        x: 3413
-        y: 499
-        width: 612
-        height: 611
+        x: 3141
+        y: 1327
+        width: 196
+        height: 247
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -728,10 +708,10 @@ TextureImporter:
       name: ATLAS_Cocina_29
       rect:
         serializedVersion: 2
-        x: 2113
-        y: 363
-        width: 643
-        height: 411
+        x: 2769
+        y: 1320
+        width: 333
+        height: 263
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -749,10 +729,10 @@ TextureImporter:
       name: ATLAS_Cocina_30
       rect:
         serializedVersion: 2
-        x: 2898
-        y: 558
-        width: 368
-        height: 193
+        x: 3207
+        y: 885
+        width: 152
+        height: 265
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -770,10 +750,10 @@ TextureImporter:
       name: ATLAS_Cocina_31
       rect:
         serializedVersion: 2
-        x: 3263
-        y: 736
-        width: 8
-        height: 8
+        x: 2885
+        y: 539
+        width: 396
+        height: 228
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -791,10 +771,10 @@ TextureImporter:
       name: ATLAS_Cocina_32
       rect:
         serializedVersion: 2
-        x: 2675
-        y: 355
-        width: 8
-        height: 8
+        x: 2789
+        y: 103
+        width: 229
+        height: 301
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -812,10 +792,10 @@ TextureImporter:
       name: ATLAS_Cocina_33
       rect:
         serializedVersion: 2
-        x: 2793
-        y: 110
-        width: 218
-        height: 287
+        x: 3050
+        y: 103
+        width: 234
+        height: 361
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -833,10 +813,10 @@ TextureImporter:
       name: ATLAS_Cocina_34
       rect:
         serializedVersion: 2
-        x: 3055
-        y: 110
-        width: 219
-        height: 342
+        x: 3299
+        y: 104
+        width: 232
+        height: 262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -854,10 +834,10 @@ TextureImporter:
       name: ATLAS_Cocina_35
       rect:
         serializedVersion: 2
-        x: 3304
-        y: 110
-        width: 218
-        height: 251
+        x: 3553
+        y: 138
+        width: 413
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -867,48 +847,6 @@ TextureImporter:
       bones: []
       spriteID: 9ee2a58b24b627244a0fc81c494a4109
       internalID: 1977312983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ATLAS_Cocina_36
-      rect:
-        serializedVersion: 2
-        x: 2115
-        y: 108
-        width: 606
-        height: 203
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e355db520d7c10145a16af8ad6deacf2
-      internalID: -510998286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ATLAS_Cocina_37
-      rect:
-        serializedVersion: 2
-        x: 3564
-        y: 147
-        width: 389
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2f2f6d66d3612a4f92367a089e530d7
-      internalID: 474800961
       vertices: []
       indices: 
       edges: []
@@ -928,7 +866,6 @@ TextureImporter:
       ATLAS_Cocina_7: -2068997299
       ATLAS_Cocina_23: 600486773
       ATLAS_Cocina_11: 754240224
-      ATLAS_Cocina_36: -510998286
       ATLAS_Cocina_5: -80076526
       ATLAS_Cocina_14: -88640605
       ATLAS_Cocina_19: 1808742353
@@ -938,7 +875,6 @@ TextureImporter:
       ATLAS_Cocina_24: -1213565426
       ATLAS_Cocina_17: 442353454
       ATLAS_Cocina_35: 1977312983
-      ATLAS_Cocina_37: 474800961
       ATLAS_Cocina_12: 231683758
       ATLAS_Cocina_33: 472824290
       ATLAS_Cocina_8: -1455995431

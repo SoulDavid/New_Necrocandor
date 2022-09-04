@@ -234,9 +234,10 @@ MonoBehaviour:
   returnSpeed: -40
   range: 20
   stopRange: 2
-  forceToGoToWall: 40
+  forceToGoToWall: 20
   caster: {fileID: 0}
   collidedWidth: {fileID: 0}
+  rb_caster: {fileID: 0}
   line: {fileID: 246984955232510173}
   spriteRender: {fileID: 0}
 --- !u!1 &8611139888752462966

@@ -11,10 +11,13 @@ public class Platform_Buttons : MonoBehaviour
     [SerializeField] private List<MovablePlatform> platforms_asigned = new List<MovablePlatform>();
 
     public Platform_Buttons pairButtons;
+    [SerializeField] private DoorController doorController;
 
     [SerializeField] private bool is_activated;
     [SerializeField] private string[] tagsToCheck;
     [SerializeField] private Animator anim;
+
+    [SerializeField] private bool isPlatform;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +28,12 @@ public class Platform_Buttons : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        is_activated = true;
-        anim.SetBool("isPressed", is_activated);
-
         if(tagsToCheck.Contains(collision.tag))
         {
-            switch(typeButton)
+            is_activated = true;
+            anim.SetBool("isPressed", is_activated);
+
+            switch (typeButton)
             {
                 case Type_Of_Button.ONE_USE:
                     foreach (MovablePlatform platform in platforms_asigned)
@@ -50,13 +53,21 @@ public class Platform_Buttons : MonoBehaviour
                 case Type_Of_Button.TWO_BUTTONS:
                     if(pairButtons != null && pairButtons.is_activated)
                     {
-                        foreach(MovablePlatform platform in platforms_asigned)
+                        if(isPlatform)
                         {
-                            platform.activateMovement = true;
+                            foreach (MovablePlatform platform in platforms_asigned)
+                            {
+                                platform.activateMovement = true;
 
-                            if (!platform.constant_Movement)
-                                platform.Reverse = false;
+                                if (!platform.constant_Movement)
+                                    platform.Reverse = false;
+                            }
                         }
+                        else
+                        {
+                            doorController.OpenDoor();
+                        }
+
                     }
                     break;
             }
@@ -84,15 +95,19 @@ public class Platform_Buttons : MonoBehaviour
 
                     break;
                 case Type_Of_Button.TWO_BUTTONS:
-                    foreach (MovablePlatform platform in platforms_asigned)
+                    if(isPlatform)
                     {
-                        if (platform.constant_Movement)
-                            platform.activateMovement = false;
-                        else
-                            platform.Reverse = true;
+                        foreach (MovablePlatform platform in platforms_asigned)
+                        {
+                            if (platform.constant_Movement)
+                                platform.activateMovement = false;
+                            else
+                                platform.Reverse = true;
+                        }
+                        is_activated = false;
+                        anim.SetBool("isPressed", is_activated);
                     }
-                    is_activated = false;
-                    anim.SetBool("isPressed", is_activated);
+
                     break;
             }
         }

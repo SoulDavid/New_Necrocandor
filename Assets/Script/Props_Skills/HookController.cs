@@ -13,8 +13,7 @@ public class HookController : MonoBehaviour
 
     //[HideInInspector]
     public Transform caster, collidedWidth;
-    [HideInInspector]
-    private Rigidbody2D rb_caster;
+    [SerializeField] private Rigidbody2D rb_caster;
     [SerializeField]
     private LineRenderer line;
     [SerializeField]
@@ -115,11 +114,15 @@ public class HookController : MonoBehaviour
                 case 0:
                     if(direction == 0)
                     {
+                        speed = 0;
+                        rb_caster.isKinematic = true;
                         Vector2 VectorForceRight = new Vector2(forceToGoToWall, 0);
                         rb_caster.velocity = VectorForceRight;
                     }
                     else
                     {
+                        speed = 0;
+                        rb_caster.isKinematic = true;
                         Vector2 VectorForceLeft = new Vector2(-forceToGoToWall, 0);
                         rb_caster.velocity = VectorForceLeft;
                     }

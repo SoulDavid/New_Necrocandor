@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<scenes>
+    <scene name = "Scene_Pasillo">
+        <texts>
+            <text> El reino de Palesia está siendo azotada por una horda de zombies que amenaza con conquistarlo todo. El amo y señor de estas criaturas se le conoce por el sobrenombre de El Maestro. </text>
+            <text> Surgido de la nada El Maestro ha conquistado rápidamente la mitad del reino, solo le detiene la fuerte resistencia que están oponiendo los ejércitos del rey y de los nobles que aún no han caído antes sus fuerzas. </text>
+        </texts>
+    </scene>
+</scenes>

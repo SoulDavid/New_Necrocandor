@@ -10,6 +10,8 @@ TagManager:
   - Hook
   - Button
   - HoldableObject
+  - Platform
+  - DialogueTrigger
   layers:
   - Default
   - TransparentFX

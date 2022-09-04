@@ -6,8 +6,18 @@ public class PlayerCollider : MonoBehaviour
 {
     [SerializeField] private Transform playerSpawn;
     [SerializeField] private GameObject elementToThrow;
+    [SerializeField] private Rigidbody2D body;
+    [SerializeField] private State statePlayer;
+
+    private bool canDialogue;
     private bool isDead;
     private bool canHold;
+
+    private void Start()
+    {
+        body = GetComponent<Rigidbody2D>();
+        statePlayer = GetComponent<State>();
+    }
 
     public bool GetIsDead()
     {
@@ -17,6 +27,11 @@ public class PlayerCollider : MonoBehaviour
     public bool GetCanHold()
     {
         return canHold;
+    }
+
+    public bool GetCanDialogue()
+    {
+        return canDialogue;
     }
 
     public GameObject GetElementToThrow()
@@ -37,7 +52,11 @@ public class PlayerCollider : MonoBehaviour
                 StartCoroutine(DeadAction());
         }
 
-
+        if(collision.gameObject.CompareTag("DialogueTrigger"))
+        {
+            GetComponent<DialogueController>().SetStartFromScratch(true);
+            canDialogue = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -53,6 +72,12 @@ public class PlayerCollider : MonoBehaviour
             canHold = true;
             elementToThrow = collision.gameObject;
         }
+
+        if(collision.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("Quitando kinematic");
+            body.isKinematic = false;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -61,6 +86,14 @@ public class PlayerCollider : MonoBehaviour
         {
             canHold = false;
             elementToThrow = null;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("DialogueTrigger"))
+        {
+            canDialogue = false;
         }
     }
 

@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange);
             body.velocity = velocity;
         }
-        else
+        else if (stateController.GetState() != "Hooking")
         {
             body.velocity = Vector2.zero;
         }

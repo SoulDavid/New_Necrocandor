@@ -8536,6 +8536,7 @@ GameObject:
   - component: {fileID: 8737217126895370269}
   - component: {fileID: 8199215657092812730}
   - component: {fileID: 4105921136022355148}
+  - component: {fileID: 6727510714881522896}
   - component: {fileID: 998618902458445186}
   - component: {fileID: 7111138699957203666}
   - component: {fileID: 4311394755175002601}
@@ -8663,6 +8664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpawn: {fileID: 0}
   elementToThrow: {fileID: 0}
+  body: {fileID: 0}
+  statePlayer: {fileID: 0}
 --- !u!114 &8199215657092812730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8675,6 +8678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52cf0a955443fb245bf87c90276de9b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   state: 
 --- !u!114 &4105921136022355148
 MonoBehaviour:
@@ -8691,6 +8695,19 @@ MonoBehaviour:
   siteToGrab: {fileID: 6599927529673314894}
   isHolding: 0
   speed: 1
+--- !u!114 &6727510714881522896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803077663924794531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b75a0e78285ac49aa5f8f57b530cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueSpeed: 0.1
 --- !u!114 &998618902458445186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8812,6 +8829,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c2905848-2ac8-4333-b5a9-a8b1164a4317
     m_ActionName: Player/Hold[/Keyboard/e,/XInputControllerWindows/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6727510714881522896}
+        m_TargetAssemblyTypeName: DialogueController, Assembly-CSharp
+        m_MethodName: WantToKnowHistory
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 680f4ee4-b059-427e-9a2e-ed71b5314323
+    m_ActionName: Player/Dialogue[/Keyboard/f,/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

@@ -71,6 +71,15 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dialogue"",
+                    ""type"": ""Button"",
+                    ""id"": ""680f4ee4-b059-427e-9a2e-ed71b5314323"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -225,6 +234,28 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Hold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fa4d53d5-e784-4eee-8fea-fa2f6bc1f975"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Dialogue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b73d8e5-32c6-4b8a-bc31-b6079b1f2d3b"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Dialogue"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -395,6 +426,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
         m_Player_Hook = m_Player.FindAction("Hook", throwIfNotFound: true);
         m_Player_Impulse = m_Player.FindAction("Impulse", throwIfNotFound: true);
         m_Player_Hold = m_Player.FindAction("Hold", throwIfNotFound: true);
+        m_Player_Dialogue = m_Player.FindAction("Dialogue", throwIfNotFound: true);
         // SelectionCharacter
         m_SelectionCharacter = asset.FindActionMap("SelectionCharacter", throwIfNotFound: true);
         m_SelectionCharacter_ChangeColorRight = m_SelectionCharacter.FindAction("ChangeColorRight", throwIfNotFound: true);
@@ -465,6 +497,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Hook;
     private readonly InputAction m_Player_Impulse;
     private readonly InputAction m_Player_Hold;
+    private readonly InputAction m_Player_Dialogue;
     public struct PlayerActions
     {
         private @Player_Input m_Wrapper;
@@ -474,6 +507,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
         public InputAction @Hook => m_Wrapper.m_Player_Hook;
         public InputAction @Impulse => m_Wrapper.m_Player_Impulse;
         public InputAction @Hold => m_Wrapper.m_Player_Hold;
+        public InputAction @Dialogue => m_Wrapper.m_Player_Dialogue;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -498,6 +532,9 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 @Hold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHold;
                 @Hold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHold;
                 @Hold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHold;
+                @Dialogue.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDialogue;
+                @Dialogue.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDialogue;
+                @Dialogue.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDialogue;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -517,6 +554,9 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 @Hold.started += instance.OnHold;
                 @Hold.performed += instance.OnHold;
                 @Hold.canceled += instance.OnHold;
+                @Dialogue.started += instance.OnDialogue;
+                @Dialogue.performed += instance.OnDialogue;
+                @Dialogue.canceled += instance.OnDialogue;
             }
         }
     }
@@ -603,6 +643,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
         void OnHook(InputAction.CallbackContext context);
         void OnImpulse(InputAction.CallbackContext context);
         void OnHold(InputAction.CallbackContext context);
+        void OnDialogue(InputAction.CallbackContext context);
     }
     public interface ISelectionCharacterActions
     {
