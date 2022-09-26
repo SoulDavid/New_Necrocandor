@@ -45,8 +45,8 @@ public class ColorPlayer : MonoBehaviour
     void OnWillRenderObject()
     {
         spriteMeshInstance.cachedRenderer.GetPropertyBlock(materialPropertyBlock);
-
-        materialPropertyBlock.SetColor("_Color", color);
+        
+        materialPropertyBlock.SetColor("_MainColor", color);
 
         spriteMeshInstance.cachedRenderer.SetPropertyBlock(materialPropertyBlock);
     }
