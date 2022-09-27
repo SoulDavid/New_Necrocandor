@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7124123473281632864
+--- !u!1 &1603872564841525584
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4778195790537443364}
-  - component: {fileID: 7445800871498358961}
+  - component: {fileID: 8106652479903356277}
+  - component: {fileID: 4658290986136465037}
   m_Layer: 0
-  m_Name: ATLAS_Cocina_24
+  m_Name: Pocimas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4778195790537443364
+--- !u!4 &8106652479903356277
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7124123473281632864}
+  m_GameObject: {fileID: 1603872564841525584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2483606, y: 0.1247921, z: 0}
-  m_LocalScale: {x: 0.40000004, y: 0.4, z: 1}
+  m_LocalPosition: {x: 0.32400084, y: 0.12479186, z: -0.057613067}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7445800871498358961
+--- !u!212 &4658290986136465037
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7124123473281632864}
+  m_GameObject: {fileID: 1603872564841525584}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -70,15 +70,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1956744327
+  m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 534267686, guid: 99723e478556304499a81d3ea03cf64e, type: 3}
+  m_Sprite: {fileID: -2079200702, guid: 99723e478556304499a81d3ea03cf64e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.67, y: 2.1101108}
+  m_Size: {x: 1.3800001, y: 2.4801302}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

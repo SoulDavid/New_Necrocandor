@@ -23,7 +23,7 @@ TagManager:
   - CameraB
   - Platform
   - Trap
-  - 
+  - Background
   - 
   - 
   - 
@@ -48,4 +48,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2425231159
+    locked: 0
+  - name: Trap
+    uniqueID: 3091320121
+    locked: 0
+  - name: Decorado
+    uniqueID: 2338222969
+    locked: 0
+  - name: Wall
+    uniqueID: 2709271535
     locked: 0
