@@ -27,6 +27,7 @@ public class PlayerAddedAtScene : MonoBehaviour
 
     public void SwitchNextPlayer(PlayerInput playerInput)
     {
+        Debug.Log("hELLO EMPIECHA EL CHOW");
         inputManager.playerPrefab = prefabPlayer[1];
         playerSpawned++;
     }
