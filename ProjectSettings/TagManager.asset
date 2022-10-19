@@ -52,11 +52,14 @@ TagManager:
   - name: Background
     uniqueID: 2425231159
     locked: 0
+  - name: Decorado
+    uniqueID: 2338222969
+    locked: 0
   - name: Trap
     uniqueID: 3091320121
     locked: 0
-  - name: Decorado
-    uniqueID: 2338222969
+  - name: Floor
+    uniqueID: 2627213047
     locked: 0
   - name: Wall
     uniqueID: 2709271535

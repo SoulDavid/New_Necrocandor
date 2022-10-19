@@ -425,18 +425,22 @@ public class Dead : StateBehavior
         : base(_anim, _playerControls, _ground, _body, _playerHook, _playerLife)
     {
         name = STATE.ISDEAD;
+        body = _body;
     }
 
     public override void Enter()
     {
-        anim.SetTrigger("isDead");
+
+        anim.SetTrigger("isDead");        
         base.Enter();
     }
 
     public override void Update()
     {
-        if(onGround.GetOnGround() && !playerLife.GetIsDead())
+        body.gravityScale = 1000000f;
+        if (onGround.GetOnGround() && !playerLife.GetIsDead())
         {
+            body.gravityScale = 1f;
             nextState = new Idle(anim, playerControls, onGround, body, playerHook, playerLife);
             stage = EVENT.EXIT;
         }
